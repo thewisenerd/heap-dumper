@@ -60,10 +60,10 @@ fun dump(array: ObjectArrayInstance, os: OutputStream) {
 }
 
 fun main() {
-    val heapFile = File("/Users/thewisenerd/data/gc220113_01.hprof")
+    val heapFile = File("/Users/thewisenerd/works/data/2022-01-13/gc220113_01.hprof")
     val heap = HeapFactory.createHeap(heapFile)
 
-    val outputFile = File("/Users/thewisenerd/data/logs_220113_01.json").outputStream().buffered()
+    val outputFile = File("/Users/thewisenerd/works/data/2022-01-13/logs_220113_01_${System.currentTimeMillis()}.json").outputStream().buffered()
     outputFile.use { os ->
         dump(heap.getInstanceByID(0x6422ac568).cast(), os)
     }
