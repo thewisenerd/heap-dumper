@@ -6,7 +6,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <kotlin.version>1.6.10</kotlin.version>
+        <kotlin.version>2.0.20</kotlin.version>
         <netbeans.lib.profiler>RELEASE126</netbeans.lib.profiler>
     </properties>
 
@@ -48,6 +48,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>13</source>
+                    <target>13</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
